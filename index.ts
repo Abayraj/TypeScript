@@ -66,3 +66,46 @@ enum Direction2{
     rights ="Right",
     downs ="down"
 }
+
+
+//Objects
+
+//first way to do object
+const user:{
+    id:number,
+    name:string
+} = {
+    id:1,
+    name:'jhon'
+}
+
+//another way
+
+type User2 ={
+    id:number,
+    name:string,
+
+}
+
+//for more clear syntax 
+const user2:User2 = {
+    id:5,
+    name:'amesh'
+
+}
+
+
+//Type Assertion
+
+
+//type assertion is explicitly telling the compiler want to treat an entity as a different types 
+
+let NUM:any = "balu"
+//first way //now it will take the NUM any value as a number  if we give string the Carnum will only take number
+let Carnum = <number>NUM 
+
+
+//second way
+
+let Carnum2 = NUM as number
+console.log(typeof(Carnum2))
